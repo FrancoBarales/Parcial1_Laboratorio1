@@ -26,8 +26,6 @@ int initZonas(Zona *list, int len);
 
 int mostrarZonas(Zona *list, int len);
 
-void mostrarDataZona(Zona list);
-
 int agregarZona(Zona *list, int len, int idZona, int localidad, int idCensista);
 
 int cargarDataZona(Zona *list, int len, int localidades[]);

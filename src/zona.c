@@ -55,25 +55,20 @@ int mostrarZonas(Zona *list, int len)
 		{
 			if (list[i].isEmpty != VACIO)
 			{
-				mostrarDataZona(list[i]);
+				printf("\n|%-15d|%-15d|%-15d|%-17d|%-17d|%-17d|"
+											"\n+---------------+---------------+---------------+-----------------+-----------------+-----------------+",
+											list[i].idZona,
+											list[i].localidad,
+											list[i].idCensista,
+											list[i].cantidadInSitu,
+											list[i].cantidadVirtual,
+											list[i].cantidadAusente);
 			}
 		}
 		retorno = 0;
 	}
 
 	return retorno;
-}
-
-void mostrarDataZona(Zona list)
-{
-	printf("\n|%-15d|%-15d|%-15d|%-17d|%-17d|%-17d|"
-							"\n+---------------+---------------+---------------+-----------------+-----------------+-----------------+",
-							list.idZona,
-							list.localidad,
-							list.idCensista,
-							list.cantidadInSitu,
-							list.cantidadVirtual,
-							list.cantidadAusente);
 }
 
 int agregarZona(Zona *list, int len, int idZona, int localidad, int idCensista)
