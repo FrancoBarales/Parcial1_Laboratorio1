@@ -39,6 +39,8 @@ int initCensistas(Censista *list, int len);
 
 int mostrarCensistas(Censista *list, int len);
 
+void mostrarDataCensista(Censista list);
+
 int agregarCensista(Censista *list, int len, int id, char nombre[], char apellido[], FechaNacimiento fecha, int edad, Direccion dir);
 
 int cargarDataCensista(Censista *list, int len);

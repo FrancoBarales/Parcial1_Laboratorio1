@@ -13,8 +13,8 @@
 #include "zona.h"
 #include "utn.h"
 
-#define VACIO 1
-#define LLENO 0
+#define VACIO 0
+#define LLENO 1
 
 #define LENGTH 100
 
@@ -55,20 +55,25 @@ int mostrarZonas(Zona *list, int len)
 		{
 			if (list[i].isEmpty != VACIO)
 			{
-				printf("\n|%-15d|%-15d|%-15d|%-17d|%-17d|%-17d|"
-						"\n+---------------+---------------+---------------+-----------------+-----------------+-----------------+",
-						list[i].idZona,
-						list[i].localidad,
-						list[i].idCensista,
-						list[i].cantidadInSitu,
-						list[i].cantidadVirtual,
-						list[i].cantidadAusente);
+				mostrarDataZona(list[i]);
 			}
 		}
 		retorno = 0;
 	}
 
 	return retorno;
+}
+
+void mostrarDataZona(Zona list)
+{
+	printf("\n|%-15d|%-15d|%-15d|%-17d|%-17d|%-17d|"
+							"\n+---------------+---------------+---------------+-----------------+-----------------+-----------------+",
+							list.idZona,
+							list.localidad,
+							list.idCensista,
+							list.cantidadInSitu,
+							list.cantidadVirtual,
+							list.cantidadAusente);
 }
 
 int agregarZona(Zona *list, int len, int idZona, int localidad, int idCensista)

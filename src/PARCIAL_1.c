@@ -16,6 +16,7 @@
 #include "zona.h"
 #include "menus.h"
 #include "utn.h"
+#include "informes.h"
 
 
 #define FALSE 0
@@ -139,7 +140,7 @@ int main(void)
 				}
 				break;
 			case 10:
-				if(flag1 == FALSE || flag2 == FALSE || flag2 == FALSE)
+				if(flag1 == FALSE || flag2 == FALSE)
 				{
 					printf("\nERROR. Faltan ingresar datos (Opcion 1, 4 o 9).\n");
 				}
@@ -149,6 +150,7 @@ int main(void)
 					switch(opcionInformes)
 					{
 						case 1:
+							ordenarPorNombreYEdad(listaDeCensistas, LENGTH);
 							break;
 						case 2:
 							break;

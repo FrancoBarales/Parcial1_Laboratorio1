@@ -71,7 +71,7 @@ int menuInformes(void)
 {
 	int opcion;
 	printf("\n\nQue informe precisa?\n");
-	printf("\n1.INFORME1");
+	printf("\n1.Ordenar por nombre y edad");
 	printf("\n2.INFORME2");
 	printf("\n3.INFORME3");
 	printf("\n4.INFORME4");

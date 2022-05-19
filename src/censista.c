@@ -16,10 +16,6 @@
 
 #define VACIO 0
 #define LLENO 1
-#define INACTIVO 0
-#define ACTIVO 1
-#define LIBERADO 2
-
 #define ANIOACTUAL 2022
 
 int idCensista(void)
@@ -58,24 +54,29 @@ int mostrarCensistas(Censista *list, int len)
 		{
 			if (list[i].isEmpty != VACIO)
 			{
-				printf("\n|%-6d|%-18s|%-18s|%-2d/%-2d/%-16d|%-14s|%-6d|%-20s N°%-5d|"
-						"\n+------+------------------+------------------+----------------------+--------------+------+----------------------------+",
-					   list[i].idCensista,
-					   list[i].nombre,
-					   list[i].apellido,
-					   list[i].fechaNacimiento.diaNac,
-					   list[i].fechaNacimiento.mesNac,
-					   list[i].fechaNacimiento.anioNac,
-					   list[i].estadoCensista,
-					   list[i].edad,
-					   list[i].direccion.nombreDir,
-					   list[i].direccion.alturaDir);
+				mostrarDataCensista(list[i]);
 			}
 		}
 		retorno = 0;
 	}
 
 	return retorno;
+}
+
+void mostrarDataCensista(Censista list)
+{
+	printf("\n|%-6d|%-18s|%-18s|%-2d/%-2d/%-16d|%-14s|%-6d|%-20s N°%-5d|"
+							"\n+------+------------------+------------------+----------------------+--------------+------+----------------------------+",
+						   list.idCensista,
+						   list.nombre,
+						   list.apellido,
+						   list.fechaNacimiento.diaNac,
+						   list.fechaNacimiento.mesNac,
+						   list.fechaNacimiento.anioNac,
+						   list.estadoCensista,
+						   list.edad,
+						   list.direccion.nombreDir,
+						   list.direccion.alturaDir);
 }
 
 int agregarCensista(Censista *list, int len, int id, char nombre[], char apellido[], FechaNacimiento fecha, int edad, Direccion dir)
