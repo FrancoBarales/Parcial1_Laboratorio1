@@ -257,7 +257,6 @@ int cargaForzadaZonas(Zona list[], int len)
 
 	if(list != NULL && len > 0)
 	{
-		//int agregarZona(Zona *list, int len, int idZona, int localidad, int idCensista = 0)
 		agregarZona(list, len, 8991, 6, 6001);
 		agregarZona(list, len, 8992, 37, 6002);
 		agregarZona(list, len, 8993, 24, 6003);
@@ -330,4 +329,3 @@ int buscarLocalidadEnArray(int list[], int len, int localidad)
 	}
 	return retorno;
 }
-

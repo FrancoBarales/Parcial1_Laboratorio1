@@ -18,7 +18,6 @@
 #include "utn.h"
 #include "informes.h"
 
-
 #define FALSE 0
 #define TRUE 1
 
@@ -125,6 +124,34 @@ int main(void)
 				}
 				break;
 			case 9:
+				if(flag1 == FALSE || flag2 == FALSE)
+				{
+					printf("\nERROR. Faltan ingresar datos (Opcion 1, 4 o 9).\n");
+				}
+				else
+				{
+					opcionInformes = menuInformes();
+					switch(opcionInformes)
+					{
+						case 1:
+							contarCensistasActivoYZonaPendiente(listaDeCensistas, listaDeZonas, LENGTH);
+							break;
+						case 2:
+							ordenarPorNombreYApellido(listaDeCensistas, listaDeZonas, LENGTH);
+							break;
+						case 3:
+							localidadConMasCasasAusentes(listaDeZonas, LENGTH);
+							break;
+						case 4:
+							censistaConZonaMasCensada(listaDeZonas, LENGTH);
+							break;
+						case 5:
+							promedioCensosPorCensistaOZona(listaDeCensistas, listaDeZonas, LENGTH);
+							break;
+					}
+				}
+				break;
+			case 10:
 				if(flag3 == FALSE)
 				{
 					cargaForzadaCensistas(listaDeCensistas, LENGTH);
@@ -137,28 +164,6 @@ int main(void)
 				else
 				{
 					printf("\nERROR. La carga forzada ya fue realizada.\n");
-				}
-				break;
-			case 10:
-				if(flag1 == FALSE || flag2 == FALSE)
-				{
-					printf("\nERROR. Faltan ingresar datos (Opcion 1, 4 o 9).\n");
-				}
-				else
-				{
-					opcionInformes = menuInformes();
-					switch(opcionInformes)
-					{
-						case 1:
-							ordenarPorNombreYEdad(listaDeCensistas, LENGTH);
-							break;
-						case 2:
-							break;
-						case 3:
-							break;
-						case 4:
-							break;
-					}
 				}
 				break;
 		}

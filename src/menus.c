@@ -23,8 +23,8 @@ int menuPrincipal(void)
 	printf("\n6.Carga de datos");
 	printf("\n7.Mostrar censistas");
 	printf("\n8.Mostrar zonas");
-	printf("\n9.Carga forzada de censistas y zonas");
-	printf("\n10.Menu de informes");
+	printf("\n9.Menu de informes");
+	printf("\n10.Carga forzada de censistas y zonas");
 	printf("\n11.Salir\n");
 	utn_getNumero(&opcion,"\nElegir opcion: ","\nERROR. Seleccione una opcion correcta.", 1, 11, 3);
 	return opcion;
@@ -71,11 +71,12 @@ int menuInformes(void)
 {
 	int opcion;
 	printf("\n\nQue informe precisa?\n");
-	printf("\n1.Ordenar por nombre y edad");
-	printf("\n2.INFORME2");
-	printf("\n3.INFORME3");
-	printf("\n4.INFORME4");
-	printf("\n5.Salir\n");
-	utn_getNumero(&opcion,"\nElegir opcion: ","\nERROR. Seleccione una opcion correcta.", 1, 5, 3);
+	printf("\n1.Informar cantidad de censistas en estado Activo con zona Pendiente.");
+	printf("\n2.Ordenar alfabéticamente por apellido y nombre los censistas de localidad N°2,3,4,5.");
+	printf("\n3.Informar nombre de localidad con más casas ausentes.");
+	printf("\n4.Informar el censista cuya zona fue la más censada.");
+	printf("\n5.Informar el promedio de censos por censista/zona.");
+	printf("\n6.Salir\n");
+	utn_getNumero(&opcion,"\nElegir opcion: ","\nERROR. Seleccione una opcion correcta.", 1, 6, 3);
 	return opcion;
 }
