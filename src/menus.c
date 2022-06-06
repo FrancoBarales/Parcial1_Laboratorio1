@@ -23,8 +23,8 @@ int menuPrincipal(void)
 	printf("\n6.Carga de datos");
 	printf("\n7.Mostrar censistas");
 	printf("\n8.Mostrar zonas");
-	printf("\n9.Menu de informes");
-	printf("\n10.Carga forzada de censistas y zonas");
+	printf("\n9.Carga forzada de censistas y zonas");
+	printf("\n10.Menu de informes");
 	printf("\n11.Salir\n");
 	utn_getNumero(&opcion,"\nElegir opcion: ","\nERROR. Seleccione una opcion correcta.", 1, 11, 3);
 	return opcion;

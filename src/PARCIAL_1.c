@@ -18,6 +18,7 @@
 #include "utn.h"
 #include "informes.h"
 
+
 #define FALSE 0
 #define TRUE 1
 
@@ -124,7 +125,22 @@ int main(void)
 				}
 				break;
 			case 9:
-				if(flag1 == FALSE || flag2 == FALSE)
+				if(flag3 == FALSE)
+				{
+					cargaForzadaCensistas(listaDeCensistas, LENGTH);
+					cargaForzadaZonas(listaDeZonas, LENGTH);
+					flag1 = TRUE;
+					flag2 = TRUE;
+					flag3 = TRUE;
+					printf("\nCarga forzada realizada exitosamente.\n");
+				}
+				else
+				{
+					printf("\nERROR. La carga forzada ya fue realizada.\n");
+				}
+				break;
+			case 10:
+				if(flag1 == FALSE || flag2 == FALSE || flag2 == FALSE)
 				{
 					printf("\nERROR. Faltan ingresar datos (Opcion 1, 4 o 9).\n");
 				}
@@ -149,21 +165,6 @@ int main(void)
 							promedioCensosPorCensistaOZona(listaDeCensistas, listaDeZonas, LENGTH);
 							break;
 					}
-				}
-				break;
-			case 10:
-				if(flag3 == FALSE)
-				{
-					cargaForzadaCensistas(listaDeCensistas, LENGTH);
-					cargaForzadaZonas(listaDeZonas, LENGTH);
-					flag1 = TRUE;
-					flag2 = TRUE;
-					flag3 = TRUE;
-					printf("\nCarga forzada realizada exitosamente.\n");
-				}
-				else
-				{
-					printf("\nERROR. La carga forzada ya fue realizada.\n");
 				}
 				break;
 		}
